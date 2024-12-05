@@ -1,6 +1,6 @@
-package dev.tanvx.profile_service.domain.account.entity;
+package dev.tanvx.transaction_service.domain.category.entity;
 
-import dev.tanvx.profile_service.domain.AbstractEntity;
+import dev.tanvx.transaction_service.domain.AbstractEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,8 +21,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "account")
-public class Account extends AbstractEntity {
+@Table(name = "category")
+public class Category extends AbstractEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
