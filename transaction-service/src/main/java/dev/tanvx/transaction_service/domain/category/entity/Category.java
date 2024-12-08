@@ -1,12 +1,10 @@
 package dev.tanvx.transaction_service.domain.category.entity;
 
 import dev.tanvx.transaction_service.domain.AbstractEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import dev.tanvx.transaction_service.domain.transaction.entity.Transaction;
+import jakarta.persistence.*;
+
+import java.util.List;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,21 +19,18 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "category")
+@Table(name = "categories")
 public class Category extends AbstractEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
-  @Column(name = "id", updatable = false, nullable = false)
   private UUID id;
 
-  @Column(name = "name", nullable = false)
+  @Column(nullable = false, unique = true)
   private String name;
 
-  @Column(name = "email", nullable = false, unique = true)
-  private String email;
+  private String description;
 
-  @Column(name = "password", nullable = false)
-  @ToString.Exclude
-  private String password;
+  @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<Transaction> transactions;
 }

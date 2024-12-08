@@ -1,6 +1,6 @@
 package dev.tanvx.transaction_service.infrastructure.util;
 
-import dev.tanvx.profile_service.application.model.UserContext;
+import dev.tanvx.transaction_service.application.model.UserContext;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.List;

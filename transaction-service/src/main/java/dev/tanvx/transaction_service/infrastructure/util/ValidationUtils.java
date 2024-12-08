@@ -1,6 +1,6 @@
 package dev.tanvx.transaction_service.infrastructure.util;
 
-import dev.tanvx.profile_service.application.exception.ValidationException;
+import dev.tanvx.transaction_service.application.exception.ValidationException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 import java.util.List;

@@ -1,21 +1,11 @@
 package dev.tanvx.profile_service.application.exception.handler;
 
-import dev.tanvx.commonservice.constant.MessageProperties;
-import dev.tanvx.commonservice.dto.ErrorResponse;
-import dev.tanvx.commonservice.dto.ValidationErrorResponse;
-import dev.tanvx.commonservice.dto.ValidationErrorResponse.Errors;
-import dev.tanvx.commonservice.exception.BusinessException;
-import dev.tanvx.commonservice.exception.ValidationException;
 import dev.tanvx.profile_service.application.exception.BusinessException;
 import dev.tanvx.profile_service.application.exception.ValidationException;
 import dev.tanvx.profile_service.application.exception.dto.ErrorResponse;
 import dev.tanvx.profile_service.application.exception.dto.ValidationErrorResponse;
 import dev.tanvx.profile_service.application.exception.dto.ValidationErrorResponse.Errors;
 import dev.tanvx.profile_service.infrastructure.constants.MessageProperties;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -25,6 +15,11 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 @Slf4j
 @RestControllerAdvice

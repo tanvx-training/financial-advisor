@@ -3,3 +3,12 @@ server:
 spring:
   application:
     name: profile-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user-service
+    username: postgres
+    password: password
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: none
