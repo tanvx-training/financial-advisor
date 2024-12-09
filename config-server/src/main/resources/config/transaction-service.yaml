@@ -3,3 +3,12 @@ server:
 spring:
   application:
     name: transaction-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/transaction-service
+    username: postgres
+    password: password
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: none
