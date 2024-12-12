@@ -9,6 +9,11 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:9000/realms/financial-advisor/protocol/openid-connect/certs"
 
 management:
   endpoints:
