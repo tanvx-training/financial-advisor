@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.tanvx</groupId>
-	<artifactId>transaction-service</artifactId>
+	<artifactId>vote-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>transaction-service</name>
-	<description>transaction-service</description>
+	<name>vote-service</name>
+	<description>vote-service</description>
 	<url/>
 	<licenses>
 		<license/>
