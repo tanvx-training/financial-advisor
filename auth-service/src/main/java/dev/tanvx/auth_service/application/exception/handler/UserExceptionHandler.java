@@ -24,7 +24,7 @@ import java.util.Objects;
 @Slf4j
 @RestControllerAdvice
 @RequiredArgsConstructor
-public class ProfileExceptionHandler extends ResponseEntityExceptionHandler {
+public class UserExceptionHandler extends ResponseEntityExceptionHandler {
 
   private static final String RESULT_NG = "NG";
 

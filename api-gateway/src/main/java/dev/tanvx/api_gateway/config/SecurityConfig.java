@@ -20,8 +20,11 @@ public class SecurityConfig {
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity serverHttpSecurity) {
         serverHttpSecurity
                 .authorizeExchange(exchanges -> {
-                    exchanges.pathMatchers("/financial-advisor/notification-service/**")
-                            .hasRole("NOTIFICATION_SERVICE");
+                    exchanges
+                            .pathMatchers("/financial-advisor/auth-service/**")
+                            .permitAll()
+                            .pathMatchers("/financial-advisor/notification-service/**")
+                            .hasRole("READ");
                 })
                 .oauth2ResourceServer(oAuth2ResourceServerSpec -> {
                     oAuth2ResourceServerSpec.jwt(jwtSpec -> {

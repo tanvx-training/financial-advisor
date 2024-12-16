@@ -19,6 +19,11 @@ public class ApiGatewayApplication {
     public RouteLocator routes(RouteLocatorBuilder builder) {
 
         return builder.routes()
+                .route(p -> p.path("/financial-advisor/auth-service/**")
+                        .filters(f -> f.rewritePath("/financial-advisor/auth-service/?(?<segment>.*)",
+                                        "/${segment}")
+                                .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
+                        .uri("lb://AUTH-SERVICE"))
                 .route(p -> p.path("/financial-advisor/profile-service/**")
                         .filters(f -> f.rewritePath("/financial-advisor/profile-service/?(?<segment>.*)",
 										"/${segment}")

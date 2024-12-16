@@ -13,7 +13,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: "http://localhost:9000/realms/financial-advisor/protocol/openid-connect/certs"
+          jwk-set-uri: "http://localhost:9000/oauth2/jwks"
 
 management:
   endpoints:
